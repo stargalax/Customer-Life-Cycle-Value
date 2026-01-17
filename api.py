@@ -13,9 +13,11 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://clv-dashboard.vercel.app",  # Add your Vercel URL
+        "http://localhost:5173",  # Vite dev server
+        "https://customer-life-cycle-value-frontend.vercel.app",  # Your actual Vercel URL
         "https://*.vercel.app"  # Allow all Vercel preview deployments
     ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
